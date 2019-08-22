@@ -3,14 +3,24 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { ProducttableComponent } from './components/producttable/producttable.component';
+
+import { MatTableModule } from '@angular/material';
+
+import { ProductService } from './services/product.service';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ProducttableComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    MatTableModule
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
